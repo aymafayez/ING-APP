@@ -12,10 +12,15 @@ class MarketplaceHomeTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var productImageView: UIImageView!
+    
     @IBOutlet weak var productNameLabel: UILabel!
+    
     @IBOutlet weak var productUnitLabel: UILabel!
+    
     @IBOutlet weak var productPriceLabel: UILabel!
+    
     @IBOutlet weak var productCurrencyLabel: UILabel!
+    
     @IBOutlet weak var numOfElementsLabel: UILabel!
     
     

@@ -11,6 +11,9 @@ import UIKit
 class MarketplaceHomeViewController: BaseViewController {
     
     
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Initializers
     init(viewModel: MarketplaceHomeViewModel) {
         super.init(viewModel: viewModel)
@@ -24,6 +27,7 @@ class MarketplaceHomeViewController: BaseViewController {
         super.init(nibName: nibName, bundle: bundle)
     }
 
+     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 

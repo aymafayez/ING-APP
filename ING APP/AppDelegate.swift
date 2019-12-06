@@ -16,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupRootViewController()
         return true
+    }
+    
+    private func setupRootViewController() {
+        let navVC = UINavigationController()
+        navVC.navigationBar.isHidden = true
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
+        let vm = MarketplaceHomeViewModel()
+        let vc = MarketplaceHomeViewController(viewModel: vm)
+        navVC.pushViewController(vc, animated: true)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

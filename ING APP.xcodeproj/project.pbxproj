@@ -14,6 +14,11 @@
 		944F56F2239A56020022A422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944F56F0239A56020022A422 /* LaunchScreen.storyboard */; };
 		944F56FD239A56020022A422 /* ING_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F56FC239A56020022A422 /* ING_APPTests.swift */; };
 		944F5708239A56020022A422 /* ING_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5707239A56020022A422 /* ING_APPUITests.swift */; };
+		944F5717239A562D0022A422 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5716239A562D0022A422 /* BaseViewController.swift */; };
+		944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5718239A563D0022A422 /* BaseViewModel.swift */; };
+		944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */; };
+		944F571D239A56610022A422 /* MarketplaceHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */; };
+		944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		944F5703239A56020022A422 /* ING APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ING APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F5707239A56020022A422 /* ING_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ING_APPUITests.swift; sourceTree = "<group>"; };
 		944F5709239A56030022A422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944F5716239A562D0022A422 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		944F5718239A563D0022A422 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeViewController.swift; sourceTree = "<group>"; };
+		944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketplaceHomeViewController.xib; sourceTree = "<group>"; };
+		944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,8 @@
 		944F56E6239A56000022A422 /* ING APP */ = {
 			isa = PBXGroup;
 			children = (
+				944F5723239A58410022A422 /* Base */,
+				944F5715239A56160022A422 /* Marketplace */,
 				944F56E7239A56000022A422 /* AppDelegate.swift */,
 				944F56E9239A56000022A422 /* ViewController.swift */,
 				944F56EB239A56000022A422 /* Main.storyboard */,
@@ -123,6 +135,49 @@
 				944F5709239A56030022A422 /* Info.plist */,
 			);
 			path = "ING APPUITests";
+			sourceTree = "<group>";
+		};
+		944F5715239A56160022A422 /* Marketplace */ = {
+			isa = PBXGroup;
+			children = (
+				944F5722239A581A0022A422 /* Home */,
+			);
+			path = Marketplace;
+			sourceTree = "<group>";
+		};
+		944F571E239A57180022A422 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		944F5721239A58080022A422 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */,
+				944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		944F5722239A581A0022A422 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				944F5721239A58080022A422 /* View */,
+				944F571E239A57180022A422 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		944F5723239A58410022A422 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				944F5716239A562D0022A422 /* BaseViewController.swift */,
+				944F5718239A563D0022A422 /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				944F56F2239A56020022A422 /* LaunchScreen.storyboard in Resources */,
+				944F571D239A56610022A422 /* MarketplaceHomeViewController.xib in Resources */,
 				944F56EF239A56020022A422 /* Assets.xcassets in Resources */,
 				944F56ED239A56000022A422 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */,
 				944F56EA239A56000022A422 /* ViewController.swift in Sources */,
+				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
 				944F56E8239A56000022A422 /* AppDelegate.swift in Sources */,
+				944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */,
+				944F5717239A562D0022A422 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +498,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Marketplace.com.ING-APP";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ING-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,7 +515,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Marketplace.com.ING-APP";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ING-APP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

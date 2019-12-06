@@ -19,6 +19,8 @@
 		944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */; };
 		944F571D239A56610022A422 /* MarketplaceHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */; };
 		944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */; };
+		944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */; };
+		944F5727239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeViewController.swift; sourceTree = "<group>"; };
 		944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketplaceHomeViewController.xib; sourceTree = "<group>"; };
 		944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeViewModel.swift; sourceTree = "<group>"; };
+		944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeTableViewCell.swift; sourceTree = "<group>"; };
+		944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketplaceHomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 			children = (
 				944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */,
 				944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */,
+				944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */,
+				944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			files = (
 				944F56F2239A56020022A422 /* LaunchScreen.storyboard in Resources */,
 				944F571D239A56610022A422 /* MarketplaceHomeViewController.xib in Resources */,
+				944F5727239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib in Resources */,
 				944F56EF239A56020022A422 /* Assets.xcassets in Resources */,
 				944F56ED239A56000022A422 /* Main.storyboard in Resources */,
 			);
@@ -315,6 +322,7 @@
 				944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */,
 				944F56EA239A56000022A422 /* ViewController.swift in Sources */,
 				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
+				944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */,
 				944F56E8239A56000022A422 /* AppDelegate.swift in Sources */,
 				944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */,
 				944F5717239A562D0022A422 /* BaseViewController.swift in Sources */,

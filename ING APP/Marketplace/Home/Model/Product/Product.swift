@@ -10,11 +10,11 @@ import Foundation
 
 class Product {
     var name: String
-    var price: String
+    var price: Double
     var currency: Currency
     var unit: Unit
     
-    init(name: String, price: String, currency: Currency, unit: Unit) {
+    init(name: String, price: Double, currency: Currency, unit: Unit) {
         self.name = name
         self.price = price
         self.currency = currency
@@ -23,10 +23,10 @@ class Product {
 }
 
 enum Currency: String {
-    case USD = "USD"
+    case EUR = "EUR"
 }
 
-enum unit: String {
+enum Unit: String {
     case bag = "bag"
     case dozen = "dozen"
     case can = "can"

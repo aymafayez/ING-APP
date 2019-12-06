@@ -20,6 +20,8 @@ class Product {
     var currency: Currency
     
     var unit: Unit
+    
+    var numOfElements = 0 
 
     
     init(name: String, image: UIImage?, price: Double, currency: Currency, unit: Unit) {

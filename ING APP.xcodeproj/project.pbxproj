@@ -29,6 +29,8 @@
 		944F5734239A6E370022A422 /* Beans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5733239A6E370022A422 /* Beans.swift */; };
 		944F5736239A6E440022A422 /* Milk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5735239A6E440022A422 /* Milk.swift */; };
 		944F573B239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573A239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift */; };
+		944F573E239A871B0022A422 /* MarketplaceHomeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */; };
+		944F5740239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573F239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		944F5733239A6E370022A422 /* Beans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beans.swift; sourceTree = "<group>"; };
 		944F5735239A6E440022A422 /* Milk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milk.swift; sourceTree = "<group>"; };
 		944F573A239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeCellDelegate.swift; sourceTree = "<group>"; };
+		944F573F239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketplaceHomeViewController + MarketBlaceCellDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			children = (
 				944F571A239A56610022A422 /* MarketplaceHomeViewController.swift */,
 				944F573A239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift */,
+				944F573F239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift */,
 				944F571B239A56610022A422 /* MarketplaceHomeViewController.xib */,
 				944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */,
 				944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */,
@@ -188,6 +193,7 @@
 		944F5722239A581A0022A422 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				944F573C239A86B30022A422 /* Protocols */,
 				944F5728239A6C300022A422 /* Model */,
 				944F5721239A58080022A422 /* View */,
 				944F571E239A57180022A422 /* ViewModel */,
@@ -240,6 +246,14 @@
 				944F5731239A6E280022A422 /* Peas.swift */,
 			);
 			path = SeedsProduct;
+			sourceTree = "<group>";
+		};
+		944F573C239A86B30022A422 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +393,7 @@
 				944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */,
 				944F572A239A6C490022A422 /* Product.swift in Sources */,
 				944F56EA239A56000022A422 /* ViewController.swift in Sources */,
+				944F5740239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift in Sources */,
 				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
 				944F572C239A6D7B0022A422 /* FarmProduct.swift in Sources */,
 				944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */,
@@ -386,6 +401,7 @@
 				944F56E8239A56000022A422 /* AppDelegate.swift in Sources */,
 				944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */,
 				944F5736239A6E440022A422 /* Milk.swift in Sources */,
+				944F573E239A871B0022A422 /* MarketplaceHomeCellDelegate.swift in Sources */,
 				944F573B239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift in Sources */,
 				944F5730239A6E180022A422 /* Egg.swift in Sources */,
 				944F572E239A6DDF0022A422 /* SeedsProduct.swift in Sources */,

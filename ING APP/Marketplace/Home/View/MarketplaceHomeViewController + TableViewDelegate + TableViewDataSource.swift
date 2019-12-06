@@ -21,11 +21,13 @@ extension MarketplaceHomeViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MarketplaceHomeTableViewCell") as? MarketplaceHomeTableViewCell
-        cell?.productNameLabel.text = products?[indexPath.row].name
-        cell?.productImageView.image = products?[indexPath.row].image
-        cell?.productUnitLabel.text = products?[indexPath.row].unit.rawValue
-        cell?.productPriceLabel.text = String(products?[indexPath.row].price ?? 0.0)
-        cell?.productCurrencyLabel.text = products?[indexPath.row].currency.rawValue
+        cell?._productName = products?[indexPath.row].name 
+        cell?._productImage = products?[indexPath.row].image
+        cell?._productUnit = products?[indexPath.row].unit.rawValue
+        cell?._productPrice = products?[indexPath.row].price
+        cell?._productCurrency = products?[indexPath.row].currency.rawValue
+        cell?._numOfElements = products?[indexPath.row].numOfElements
+        cell?.delegate = self
         return cell ?? UITableViewCell()
     }
 

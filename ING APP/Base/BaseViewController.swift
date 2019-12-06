@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
 
     // MARK: - Properties
-    var viewModel: BaseViewModel
+    private var viewModel: BaseViewModel
     
     
     

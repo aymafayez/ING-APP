@@ -7,15 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 class Product {
-    var name: String
-    var price: Double
-    var currency: Currency
-    var unit: Unit
     
-    init(name: String, price: Double, currency: Currency, unit: Unit) {
+    var name: String
+    
+    var image: UIImage?
+    
+    var price: Double
+    
+    var currency: Currency
+    
+    var unit: Unit
+
+    
+    init(name: String, image: UIImage?, price: Double, currency: Currency, unit: Unit) {
         self.name = name
+        self.image = image
         self.price = price
         self.currency = currency
         self.unit = unit

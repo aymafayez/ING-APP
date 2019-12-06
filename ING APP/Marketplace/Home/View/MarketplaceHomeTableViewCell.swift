@@ -24,12 +24,13 @@ class MarketplaceHomeTableViewCell: UITableViewCell {
     @IBOutlet weak var numOfElementsLabel: UILabel!
     
     
-    
      // MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -46,3 +47,7 @@ class MarketplaceHomeTableViewCell: UITableViewCell {
     
     
 }
+
+
+
+

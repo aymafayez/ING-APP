@@ -14,24 +14,46 @@ class MarketplaceHomeViewController: BaseViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    let viewModel: MarketplaceHomeViewModel
+    var products: [Product]?{
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - Initializers
     init(viewModel: MarketplaceHomeViewModel) {
+        self.viewModel = viewModel
         super.init(viewModel: viewModel)
     }
     
     required init?(coder aDecoder: NSCoder) {
+        viewModel = MarketplaceHomeViewModel()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
+        viewModel = MarketplaceHomeViewModel()
         super.init(nibName: nibName, bundle: bundle)
     }
 
      // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
+        products = getProducts()
         // Do any additional setup after loading the view.
+    }
+    
+    private func setupTableView() {
+        tableView.register(UINib(nibName: "MarketplaceHomeTableViewCell", bundle: nil), forCellReuseIdentifier: "MarketplaceHomeTableViewCell")
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func getProducts() -> [Product]? {
+       return viewModel.getAllProducts()
     }
 
 

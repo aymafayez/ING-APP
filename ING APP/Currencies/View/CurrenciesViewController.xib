@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrenciesViewController" customModule="ING_APP" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="AWO-mn-bVf" id="CyL-98-HzL"/>
+                <outlet property="searchDisplayController" destination="EBb-vM-vdo" id="3nx-dZ-C1A"/>
+                <outlet property="tableView" destination="Qg2-Nj-DRz" id="aTH-B5-Gd2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-Nj-DRz">
+                    <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="AWO-mn-bVf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="5p3-QO-AZa"/>
+                        </connections>
+                    </searchBar>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dE-Rt-jep">
+                    <rect key="frame" x="362" y="49" width="37" height="30"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="vPx-G0-EPQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdR-cK-Fqr">
+                    <rect key="frame" x="15" y="49" width="48" height="30"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="JPb-Dv-3ZK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7dE-Rt-jep" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="2m8-tq-tO0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7dE-Rt-jep" secondAttribute="trailing" constant="15" id="Wj1-VX-XiL"/>
+                <constraint firstItem="FdR-cK-Fqr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="lBq-bX-5K2"/>
+                <constraint firstItem="FdR-cK-Fqr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="qHW-f0-8Me"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+        <searchDisplayController id="tla-el-XZT">
+            <connections>
+                <outlet property="delegate" destination="-1" id="D21-RG-Tx5"/>
+                <outlet property="searchContentsController" destination="-1" id="DZL-KT-Rzw"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="oxT-rJ-wKr"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="Hun-8q-lD5"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="QwC-dd-cd5">
+            <connections>
+                <outlet property="delegate" destination="-1" id="F6I-tt-pJ8"/>
+                <outlet property="searchContentsController" destination="-1" id="3Ce-IQ-jKP"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="Q8Q-eo-jUp"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="x05-ye-8K0"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="EBb-vM-vdo">
+            <connections>
+                <outlet property="delegate" destination="-1" id="FLB-WO-mbe"/>
+                <outlet property="searchBar" destination="AWO-mn-bVf" id="I1V-b2-CF5"/>
+                <outlet property="searchContentsController" destination="-1" id="1hL-UX-KZi"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="Phq-8z-Opj"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="ub9-np-xIH"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>

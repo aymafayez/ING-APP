@@ -31,6 +31,23 @@
 		944F573B239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573A239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift */; };
 		944F573E239A871B0022A422 /* MarketplaceHomeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */; };
 		944F5740239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F573F239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift */; };
+		944F5759239AAA060022A422 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5757239AAA060022A422 /* CheckoutViewController.swift */; };
+		944F575A239AAA060022A422 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F5758239AAA060022A422 /* CheckoutViewController.xib */; };
+		944F575F239AAA790022A422 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F575D239AAA790022A422 /* CheckoutTableViewCell.swift */; };
+		944F5760239AAA790022A422 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F575E239AAA790022A422 /* CheckoutTableViewCell.xib */; };
+		944F5765239AABC80022A422 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5764239AABC80022A422 /* CheckoutViewModel.swift */; };
+		944F5767239AC4470022A422 /* CheckoutViewController + TableViewDelegate + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5766239AC4470022A422 /* CheckoutViewController + TableViewDelegate + TableViewDataSource.swift */; };
+		944F576A239AD3740022A422 /* MarketplaceCheckoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5769239AD3740022A422 /* MarketplaceCheckoutDelegate.swift */; };
+		944F576C239AD4650022A422 /* CheckoutViewController + MarketplaceCheckoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F576B239AD4650022A422 /* CheckoutViewController + MarketplaceCheckoutDelegate.swift */; };
+		944F5771239AFF4D0022A422 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F576F239AFF4D0022A422 /* CurrenciesViewController.swift */; };
+		944F5772239AFF4D0022A422 /* CurrenciesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F5770239AFF4D0022A422 /* CurrenciesViewController.xib */; };
+		944F5775239B01FC0022A422 /* CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5774239B01FC0022A422 /* CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift */; };
+		944F5778239B02570022A422 /* CurrenciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5777239B02570022A422 /* CurrenciesViewModel.swift */; };
+		944F577B239B03550022A422 /* CurrenciesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5779239B03550022A422 /* CurrenciesTableViewCell.swift */; };
+		944F577C239B03550022A422 /* CurrenciesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F577A239B03550022A422 /* CurrenciesTableViewCell.xib */; };
+		944F577E239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F577D239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift */; };
+		944F5781239B0DF60022A422 /* CurrenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5780239B0DF60022A422 /* CurrenciesProtocol.swift */; };
+		944F5783239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5782239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +98,23 @@
 		944F573A239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift"; sourceTree = "<group>"; };
 		944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeCellDelegate.swift; sourceTree = "<group>"; };
 		944F573F239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarketplaceHomeViewController + MarketBlaceCellDelegate.swift"; sourceTree = "<group>"; };
+		944F5757239AAA060022A422 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		944F5758239AAA060022A422 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
+		944F575D239AAA790022A422 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		944F575E239AAA790022A422 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		944F5764239AABC80022A422 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
+		944F5766239AC4470022A422 /* CheckoutViewController + TableViewDelegate + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckoutViewController + TableViewDelegate + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		944F5769239AD3740022A422 /* MarketplaceCheckoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceCheckoutDelegate.swift; sourceTree = "<group>"; };
+		944F576B239AD4650022A422 /* CheckoutViewController + MarketplaceCheckoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckoutViewController + MarketplaceCheckoutDelegate.swift"; sourceTree = "<group>"; };
+		944F576F239AFF4D0022A422 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		944F5770239AFF4D0022A422 /* CurrenciesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrenciesViewController.xib; sourceTree = "<group>"; };
+		944F5774239B01FC0022A422 /* CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		944F5777239B02570022A422 /* CurrenciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewModel.swift; sourceTree = "<group>"; };
+		944F5779239B03550022A422 /* CurrenciesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewCell.swift; sourceTree = "<group>"; };
+		944F577A239B03550022A422 /* CurrenciesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrenciesTableViewCell.xib; sourceTree = "<group>"; };
+		944F577D239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrenciesViewController + SearchBarDelegate.swift"; sourceTree = "<group>"; };
+		944F5780239B0DF60022A422 /* CurrenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesProtocol.swift; sourceTree = "<group>"; };
+		944F5782239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckoutViewController + CurrenciesDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +165,7 @@
 		944F56E6239A56000022A422 /* ING APP */ = {
 			isa = PBXGroup;
 			children = (
+				944F576E239AFEF70022A422 /* Currencies */,
 				944F5723239A58410022A422 /* Base */,
 				944F5715239A56160022A422 /* Marketplace */,
 				944F56E7239A56000022A422 /* AppDelegate.swift */,
@@ -164,6 +199,7 @@
 		944F5715239A56160022A422 /* Marketplace */ = {
 			isa = PBXGroup;
 			children = (
+				944F5756239AA8CD0022A422 /* Checkout */,
 				944F5722239A581A0022A422 /* Home */,
 			);
 			path = Marketplace;
@@ -252,6 +288,85 @@
 			isa = PBXGroup;
 			children = (
 				944F573D239A871B0022A422 /* MarketplaceHomeCellDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		944F5756239AA8CD0022A422 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				944F5768239AD33F0022A422 /* Protocols */,
+				944F5763239AAB940022A422 /* ViewModel */,
+				944F5761239AAB770022A422 /* View */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		944F5761239AAB770022A422 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944F5757239AAA060022A422 /* CheckoutViewController.swift */,
+				944F5766239AC4470022A422 /* CheckoutViewController + TableViewDelegate + TableViewDataSource.swift */,
+				944F576B239AD4650022A422 /* CheckoutViewController + MarketplaceCheckoutDelegate.swift */,
+				944F5782239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift */,
+				944F5758239AAA060022A422 /* CheckoutViewController.xib */,
+				944F575D239AAA790022A422 /* CheckoutTableViewCell.swift */,
+				944F575E239AAA790022A422 /* CheckoutTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		944F5763239AAB940022A422 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				944F5764239AABC80022A422 /* CheckoutViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		944F5768239AD33F0022A422 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				944F5769239AD3740022A422 /* MarketplaceCheckoutDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		944F576E239AFEF70022A422 /* Currencies */ = {
+			isa = PBXGroup;
+			children = (
+				944F577F239B0DCC0022A422 /* Protocols */,
+				944F5776239B02450022A422 /* ViewModel */,
+				944F5773239AFF530022A422 /* View */,
+			);
+			path = Currencies;
+			sourceTree = "<group>";
+		};
+		944F5773239AFF530022A422 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944F576F239AFF4D0022A422 /* CurrenciesViewController.swift */,
+				944F5770239AFF4D0022A422 /* CurrenciesViewController.xib */,
+				944F5774239B01FC0022A422 /* CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift */,
+				944F577D239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift */,
+				944F5779239B03550022A422 /* CurrenciesTableViewCell.swift */,
+				944F577A239B03550022A422 /* CurrenciesTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		944F5776239B02450022A422 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				944F5777239B02570022A422 /* CurrenciesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		944F577F239B0DCC0022A422 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				944F5780239B0DF60022A422 /* CurrenciesProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -362,9 +477,13 @@
 			files = (
 				944F56F2239A56020022A422 /* LaunchScreen.storyboard in Resources */,
 				944F571D239A56610022A422 /* MarketplaceHomeViewController.xib in Resources */,
+				944F577C239B03550022A422 /* CurrenciesTableViewCell.xib in Resources */,
+				944F5760239AAA790022A422 /* CheckoutTableViewCell.xib in Resources */,
 				944F5727239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib in Resources */,
 				944F56EF239A56020022A422 /* Assets.xcassets in Resources */,
+				944F575A239AAA060022A422 /* CheckoutViewController.xib in Resources */,
 				944F56ED239A56000022A422 /* Main.storyboard in Resources */,
+				944F5772239AFF4D0022A422 /* CurrenciesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,22 +508,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944F5765239AABC80022A422 /* CheckoutViewModel.swift in Sources */,
 				944F5734239A6E370022A422 /* Beans.swift in Sources */,
 				944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */,
+				944F5771239AFF4D0022A422 /* CurrenciesViewController.swift in Sources */,
 				944F572A239A6C490022A422 /* Product.swift in Sources */,
 				944F56EA239A56000022A422 /* ViewController.swift in Sources */,
+				944F5781239B0DF60022A422 /* CurrenciesProtocol.swift in Sources */,
 				944F5740239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift in Sources */,
 				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
+				944F577E239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift in Sources */,
 				944F572C239A6D7B0022A422 /* FarmProduct.swift in Sources */,
 				944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */,
+				944F575F239AAA790022A422 /* CheckoutTableViewCell.swift in Sources */,
+				944F577B239B03550022A422 /* CurrenciesTableViewCell.swift in Sources */,
+				944F5767239AC4470022A422 /* CheckoutViewController + TableViewDelegate + TableViewDataSource.swift in Sources */,
+				944F5775239B01FC0022A422 /* CurrenciesViewController + TableViewDelegate + TableViewDataSource.swift in Sources */,
+				944F576C239AD4650022A422 /* CheckoutViewController + MarketplaceCheckoutDelegate.swift in Sources */,
 				944F5732239A6E280022A422 /* Peas.swift in Sources */,
 				944F56E8239A56000022A422 /* AppDelegate.swift in Sources */,
 				944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */,
 				944F5736239A6E440022A422 /* Milk.swift in Sources */,
 				944F573E239A871B0022A422 /* MarketplaceHomeCellDelegate.swift in Sources */,
+				944F576A239AD3740022A422 /* MarketplaceCheckoutDelegate.swift in Sources */,
 				944F573B239A74DF0022A422 /* MarketplaceHomeViewController + TableViewDelegate + TableViewDataSource.swift in Sources */,
+				944F5783239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift in Sources */,
 				944F5730239A6E180022A422 /* Egg.swift in Sources */,
 				944F572E239A6DDF0022A422 /* SeedsProduct.swift in Sources */,
+				944F5778239B02570022A422 /* CurrenciesViewModel.swift in Sources */,
+				944F5759239AAA060022A422 /* CheckoutViewController.swift in Sources */,
 				944F5717239A562D0022A422 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

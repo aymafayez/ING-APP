@@ -57,6 +57,13 @@ class MarketplaceHomeViewController: BaseViewController {
     }
 
 
+    @IBAction func nextButtonDidPressed(_ sender: Any) {
+        
+        let vm = CheckoutViewModel(selectedProducts: products!)
+        let vc = CheckoutViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

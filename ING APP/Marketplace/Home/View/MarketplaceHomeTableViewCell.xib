@@ -51,6 +51,9 @@
                             <constraint firstAttribute="height" constant="50" id="spi-nq-YJW"/>
                         </constraints>
                         <state key="normal" image="Minus-Icon"/>
+                        <connections>
+                            <action selector="removeFromCartButtonIsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="20m-BV-9bR"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-51-2GZ">
                         <rect key="frame" x="251.5" y="55" width="50" height="50"/>
@@ -59,6 +62,9 @@
                             <constraint firstAttribute="width" constant="50" id="emj-t0-FLj"/>
                         </constraints>
                         <state key="normal" image="Plus-Icon"/>
+                        <connections>
+                            <action selector="addToCartButtonIsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Urm-db-SEL"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-q9-Gfx">
                         <rect key="frame" x="177.5" y="5" width="257.5" height="16"/>
@@ -126,6 +132,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="numOfElementsLabel" destination="p5a-V7-c2j" id="HiK-jI-TIT"/>
+                <outlet property="productCurrencyLabel" destination="WrS-QD-uWL" id="UQS-wH-IbL"/>
+                <outlet property="productImageView" destination="4VQ-tf-zvR" id="TAq-7O-shH"/>
+                <outlet property="productNameLabel" destination="bCu-qZ-XnD" id="TSX-7f-fTf"/>
+                <outlet property="productPriceLabel" destination="6En-p5-zCs" id="KiK-M5-PaE"/>
+                <outlet property="productUnitLabel" destination="8Cr-q9-Gfx" id="Pdi-OF-TMf"/>
+            </connections>
             <point key="canvasLocation" x="211.59420289855075" y="121.54017857142857"/>
         </tableViewCell>
     </objects>

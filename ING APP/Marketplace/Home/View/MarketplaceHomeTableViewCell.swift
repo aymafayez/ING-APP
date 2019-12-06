@@ -9,7 +9,18 @@
 import UIKit
 
 class MarketplaceHomeTableViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productUnitLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productCurrencyLabel: UILabel!
+    @IBOutlet weak var numOfElementsLabel: UILabel!
+    
+    
+    
+     // MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +31,13 @@ class MarketplaceHomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func addToCartButtonIsPressed(_ sender: Any) {
+    }
+    
+    @IBAction func removeFromCartButtonIsPressed(_ sender: Any) {
+    }
+    
+    
     
 }

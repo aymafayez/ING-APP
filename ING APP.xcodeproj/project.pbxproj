@@ -21,6 +21,13 @@
 		944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */; };
 		944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */; };
 		944F5727239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */; };
+		944F572A239A6C490022A422 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5729239A6C490022A422 /* Product.swift */; };
+		944F572C239A6D7B0022A422 /* FarmProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F572B239A6D7B0022A422 /* FarmProduct.swift */; };
+		944F572E239A6DDF0022A422 /* SeedsProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F572D239A6DDF0022A422 /* SeedsProduct.swift */; };
+		944F5730239A6E180022A422 /* Egg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F572F239A6E180022A422 /* Egg.swift */; };
+		944F5732239A6E280022A422 /* Peas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5731239A6E280022A422 /* Peas.swift */; };
+		944F5734239A6E370022A422 /* Beans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5733239A6E370022A422 /* Beans.swift */; };
+		944F5736239A6E440022A422 /* Milk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F5735239A6E440022A422 /* Milk.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,13 @@
 		944F571F239A57370022A422 /* MarketplaceHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeViewModel.swift; sourceTree = "<group>"; };
 		944F5724239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceHomeTableViewCell.swift; sourceTree = "<group>"; };
 		944F5725239A5DC30022A422 /* MarketplaceHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketplaceHomeTableViewCell.xib; sourceTree = "<group>"; };
+		944F5729239A6C490022A422 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		944F572B239A6D7B0022A422 /* FarmProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmProduct.swift; sourceTree = "<group>"; };
+		944F572D239A6DDF0022A422 /* SeedsProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedsProduct.swift; sourceTree = "<group>"; };
+		944F572F239A6E180022A422 /* Egg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egg.swift; sourceTree = "<group>"; };
+		944F5731239A6E280022A422 /* Peas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peas.swift; sourceTree = "<group>"; };
+		944F5733239A6E370022A422 /* Beans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beans.swift; sourceTree = "<group>"; };
+		944F5735239A6E440022A422 /* Milk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +185,7 @@
 		944F5722239A581A0022A422 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				944F5728239A6C300022A422 /* Model */,
 				944F5721239A58080022A422 /* View */,
 				944F571E239A57180022A422 /* ViewModel */,
 			);
@@ -184,6 +199,44 @@
 				944F5718239A563D0022A422 /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		944F5728239A6C300022A422 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				944F5737239A6E4B0022A422 /* Product */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		944F5737239A6E4B0022A422 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				944F5729239A6C490022A422 /* Product.swift */,
+				944F5739239A6E630022A422 /* SeedsProduct */,
+				944F5738239A6E570022A422 /* FarmProduct */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		944F5738239A6E570022A422 /* FarmProduct */ = {
+			isa = PBXGroup;
+			children = (
+				944F572B239A6D7B0022A422 /* FarmProduct.swift */,
+				944F5735239A6E440022A422 /* Milk.swift */,
+				944F572F239A6E180022A422 /* Egg.swift */,
+			);
+			path = FarmProduct;
+			sourceTree = "<group>";
+		};
+		944F5739239A6E630022A422 /* SeedsProduct */ = {
+			isa = PBXGroup;
+			children = (
+				944F572D239A6DDF0022A422 /* SeedsProduct.swift */,
+				944F5733239A6E370022A422 /* Beans.swift */,
+				944F5731239A6E280022A422 /* Peas.swift */,
+			);
+			path = SeedsProduct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,12 +372,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944F5734239A6E370022A422 /* Beans.swift in Sources */,
 				944F5720239A57370022A422 /* MarketplaceHomeViewModel.swift in Sources */,
+				944F572A239A6C490022A422 /* Product.swift in Sources */,
 				944F56EA239A56000022A422 /* ViewController.swift in Sources */,
 				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
+				944F572C239A6D7B0022A422 /* FarmProduct.swift in Sources */,
 				944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */,
+				944F5732239A6E280022A422 /* Peas.swift in Sources */,
 				944F56E8239A56000022A422 /* AppDelegate.swift in Sources */,
 				944F571C239A56610022A422 /* MarketplaceHomeViewController.swift in Sources */,
+				944F5736239A6E440022A422 /* Milk.swift in Sources */,
+				944F5730239A6E180022A422 /* Egg.swift in Sources */,
+				944F572E239A6DDF0022A422 /* SeedsProduct.swift in Sources */,
 				944F5717239A562D0022A422 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,8 @@ extension CurrenciesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         selectedCurrency =  currenciesList[indexPath.row]
+         let currencyString =  currenciesList[indexPath.row]
+         selectedCurrency =  Currency(rawValue: currencyString)
     }
     
     

@@ -45,16 +45,12 @@ class CheckoutViewController: BaseViewController {
     }
     
     @IBAction func CheckoutButtonDidPressed(_ sender: Any) {
-         calculateTotalPrice()
+       calculateTotalPrice()
     }
     
     func calculateTotalPrice() {
-        var totalAmount = 0.0
-        for element in viewModel.selectedCartProducts {
-            let amount = element.product.price * Double(element.numOfElements)
-            totalAmount = totalAmount +  amount
-        }
-        currencyLabel.text = String(totalAmount.truncate(places: 5))
+        let totalPrice = viewModel.calculateTotalPrice(currency: .EUR)
+        currencyLabel.text = String(totalPrice)
     }
     
     private func setupCurrencyLabel() {

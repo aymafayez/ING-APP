@@ -9,10 +9,10 @@
 import Foundation
 
 extension MarketplaceHomeViewController: MarketplaceHomeCellDelegate {
+    
     func didAddToCart(at indexPath: IndexPath) {
              viewModel.cartElementsList[indexPath.row].numOfElements = viewModel.cartElementsList[indexPath.row].numOfElements + 1
             tableView.reloadRows(at: [indexPath], with: .automatic)
-        
     }
     
     func didRemoveFromCart(at indexPath: IndexPath) {
@@ -20,8 +20,6 @@ extension MarketplaceHomeViewController: MarketplaceHomeCellDelegate {
                             viewModel.cartElementsList[indexPath.row].numOfElements = viewModel.cartElementsList[indexPath.row].numOfElements - 1
                 tableView.reloadRows(at: [indexPath], with: .automatic)
             }
-        
     }
-    
     
 }

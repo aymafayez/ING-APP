@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CurrenciesProtocol: AnyObject {
-    func didSelectCurrency(currency: String?)
+    func didSelectCurrency(currency: Currency?)
 }

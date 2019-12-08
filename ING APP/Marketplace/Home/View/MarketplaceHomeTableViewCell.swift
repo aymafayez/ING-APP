@@ -81,21 +81,16 @@ class MarketplaceHomeTableViewCell: UITableViewCell {
     
     @IBAction func addToCartButtonIsPressed(_ sender: Any) {
         delegate?.didAddToCart(at:indexPath!)
-       
     }
     
     @IBAction func removeFromCartButtonIsPressed(_ sender: Any) {
-        delegate?.didRemoveFromCart(at:indexPath! )
+        delegate?.didRemoveFromCart(at:indexPath!)
     }
     
     
 }
 
 extension UIResponder {
-    /**
-     * Returns the next responder in the responder chain cast to the given type, or
-     * if nil, recurses the chain until the next responder is nil or castable.
-     */
     func next<U: UIResponder>(of type: U.Type = U.self) -> U? {
         return self.next.flatMap({ $0 as? U ?? $0.next() })
     }

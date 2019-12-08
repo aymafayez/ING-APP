@@ -46,23 +46,10 @@ class MarketplaceHomeViewController: BaseViewController {
         tableView.dataSource = self
     }
     
-
-
     @IBAction func nextButtonDidPressed(_ sender: Any) {
-        
         let vm = CheckoutViewModel(selectedCartProducts: viewModel.selectedElements)
         let vc = CheckoutViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)
-        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

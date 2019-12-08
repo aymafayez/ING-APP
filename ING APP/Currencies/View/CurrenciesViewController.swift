@@ -15,7 +15,7 @@ class CurrenciesViewController: BaseViewController {
     
     
     var viewModel: CurrenciesViewModel
-    var selectedCurrency: String?
+    var selectedCurrency: Currency?
     weak var delegate: CurrenciesProtocol?
     var currenciesList: [String]{
         didSet {

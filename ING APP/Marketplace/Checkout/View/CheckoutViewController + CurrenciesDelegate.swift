@@ -9,7 +9,7 @@
 import Foundation
 
 extension CheckoutViewController: CurrenciesProtocol {
-    func didSelectCurrency(currency: String?) {
-        currencyLabel.text = currency
+    func didSelectCurrency(currency: Currency?) {
+        currencyLabel.text = currency?.rawValue
     }
 }

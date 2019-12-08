@@ -23,7 +23,7 @@ class CheckoutViewController: BaseViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = CheckoutViewModel(selectedProducts: [Product]())
+        viewModel = CheckoutViewModel(selectedCartProducts: [CartElement]())
         super.init(coder: aDecoder)
     }
     
@@ -50,8 +50,8 @@ class CheckoutViewController: BaseViewController {
     
     func calculateTotalPrice() {
         var totalAmount = 0.0
-        for product in viewModel.selectedProducts {
-            let amount = product.price * Double(product.numOfElements)
+        for element in viewModel.selectedCartProducts {
+            let amount = element.product.price * Double(element.numOfElements)
             totalAmount = totalAmount +  amount
         }
         currencyLabel.text = String(totalAmount.truncate(places: 5))

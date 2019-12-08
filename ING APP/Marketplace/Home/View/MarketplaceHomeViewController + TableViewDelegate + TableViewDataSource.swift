@@ -16,17 +16,17 @@ extension MarketplaceHomeViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products?.count ?? 0
+        return viewModel.cartElementsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MarketplaceHomeTableViewCell") as? MarketplaceHomeTableViewCell
-        cell?._productName = products?[indexPath.row].name 
-        cell?._productImage = products?[indexPath.row].image
-        cell?._productUnit = products?[indexPath.row].unit.rawValue
-        cell?._productPrice = products?[indexPath.row].price
-        cell?._productCurrency = products?[indexPath.row].currency.rawValue
-        cell?._numOfElements = products?[indexPath.row].numOfElements
+        cell?._productName = viewModel.cartElementsList[indexPath.row].product.name
+        cell?._productImage = viewModel.cartElementsList[indexPath.row].product.image
+        cell?._productUnit = viewModel.cartElementsList[indexPath.row].product.unit.rawValue
+        cell?._productPrice = viewModel.cartElementsList[indexPath.row].product.price
+        cell?._productCurrency = viewModel.cartElementsList[indexPath.row].product.currency.rawValue
+        cell?._numOfElements = viewModel.cartElementsList[indexPath.row].numOfElements
         cell?.delegate = self
         return cell ?? UITableViewCell()
     }

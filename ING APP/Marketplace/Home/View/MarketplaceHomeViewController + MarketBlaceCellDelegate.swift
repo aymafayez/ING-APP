@@ -10,19 +10,17 @@ import Foundation
 
 extension MarketplaceHomeViewController: MarketplaceHomeCellDelegate {
     func didAddToCart(at indexPath: IndexPath) {
-        if let _products = products {
-            _products[indexPath.row].numOfElements = _products[indexPath.row].numOfElements + 1
+             viewModel.cartElementsList[indexPath.row].numOfElements = viewModel.cartElementsList[indexPath.row].numOfElements + 1
             tableView.reloadRows(at: [indexPath], with: .automatic)
-        }
+        
     }
     
     func didRemoveFromCart(at indexPath: IndexPath) {
-        if let _products = products {
-            if _products[indexPath.row].numOfElements != 0 {
-                            _products[indexPath.row].numOfElements = _products[indexPath.row].numOfElements - 1
+            if viewModel.cartElementsList[indexPath.row].numOfElements != 0 {
+                            viewModel.cartElementsList[indexPath.row].numOfElements = viewModel.cartElementsList[indexPath.row].numOfElements - 1
                 tableView.reloadRows(at: [indexPath], with: .automatic)
             }
-        }
+        
     }
     
     

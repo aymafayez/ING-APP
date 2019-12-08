@@ -10,20 +10,20 @@ import Foundation
 
 extension CheckoutViewController: MarketplaceCheckoutDelegate {
     func removeProduct(at indexPath: IndexPath) {
-        viewModel.selectedProducts.remove(at: indexPath.row)
+        viewModel.selectedCartProducts.remove(at: indexPath.row)
         tableView.reloadData()
         calculateTotalPrice()
     }
     
     func didAddToCart(at indexPath: IndexPath) {
-            viewModel.selectedProducts[indexPath.row].numOfElements = viewModel.selectedProducts[indexPath.row].numOfElements + 1
+        viewModel.selectedCartProducts[indexPath.row].numOfElements = viewModel.selectedCartProducts[indexPath.row].numOfElements + 1
             tableView.reloadRows(at: [indexPath], with: .automatic)
             calculateTotalPrice()
     }
     
     func didRemoveFromCart(at indexPath: IndexPath) {
-            if  viewModel.selectedProducts[indexPath.row].numOfElements != 1 {
-                 viewModel.selectedProducts[indexPath.row].numOfElements =  viewModel.selectedProducts[indexPath.row].numOfElements - 1
+            if  viewModel.selectedCartProducts[indexPath.row].numOfElements != 1 {
+                viewModel.selectedCartProducts[indexPath.row].numOfElements =  viewModel.selectedCartProducts[indexPath.row].numOfElements - 1
                 tableView.reloadRows(at: [indexPath], with: .automatic)
                 calculateTotalPrice()
             }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944C5DEF239D8948002EF4F1 /* CartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C5DEE239D8948002EF4F1 /* CartElement.swift */; };
 		944F56E8239A56000022A422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F56E7239A56000022A422 /* AppDelegate.swift */; };
 		944F56EA239A56000022A422 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F56E9239A56000022A422 /* ViewController.swift */; };
 		944F56ED239A56000022A422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944F56EB239A56000022A422 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		944C5DEE239D8948002EF4F1 /* CartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartElement.swift; sourceTree = "<group>"; };
 		944F56E4239A56000022A422 /* ING APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ING APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944F56E7239A56000022A422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		944F56E9239A56000022A422 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		944C5DED239D8909002EF4F1 /* CartElement */ = {
+			isa = PBXGroup;
+			children = (
+				944C5DEE239D8948002EF4F1 /* CartElement.swift */,
+			);
+			path = CartElement;
+			sourceTree = "<group>";
+		};
 		944F56DB239A56000022A422 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +259,7 @@
 		944F5728239A6C300022A422 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				944C5DED239D8909002EF4F1 /* CartElement */,
 				944F5737239A6E4B0022A422 /* Product */,
 			);
 			path = Model;
@@ -518,6 +529,7 @@
 				944F5740239A89290022A422 /* MarketplaceHomeViewController + MarketBlaceCellDelegate.swift in Sources */,
 				944F5719239A563D0022A422 /* BaseViewModel.swift in Sources */,
 				944F577E239B03E20022A422 /* CurrenciesViewController + SearchBarDelegate.swift in Sources */,
+				944C5DEF239D8948002EF4F1 /* CartElement.swift in Sources */,
 				944F572C239A6D7B0022A422 /* FarmProduct.swift in Sources */,
 				944F5726239A5DC30022A422 /* MarketplaceHomeTableViewCell.swift in Sources */,
 				944F575F239AAA790022A422 /* CheckoutTableViewCell.swift in Sources */,

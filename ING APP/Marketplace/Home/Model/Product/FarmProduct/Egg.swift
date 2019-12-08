@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class Egg: SeedsProduct {
+    override init(serialNum: String, name: String, image: UIImage?, price: Double, currency: Currency = .EUR , unit: Unit = .DOZEN) {
+        super.init(serialNum: serialNum, name: name, image: image, price: price, currency: currency, unit: unit)
+    }
+    
+}
+

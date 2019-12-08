@@ -11,10 +11,10 @@ import Foundation
 class CheckoutViewModel: BaseViewModel {
     
     
-    var selectedProducts: [Product]
+    var selectedCartProducts: [CartElement]
     var totalAmountCurrency: Currency = .EUR
-    init(selectedProducts: [Product]) {
-        self.selectedProducts = selectedProducts
+    init(selectedCartProducts: [CartElement]) {
+        self.selectedCartProducts = selectedCartProducts
     }
     
 }

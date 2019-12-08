@@ -16,11 +16,6 @@ class MarketplaceHomeViewController: BaseViewController {
     
     // MARK: - Properties
     let viewModel: MarketplaceHomeViewModel
-    var products: [Product]?{
-        didSet {
-            tableView.reloadData()
-        }
-    }
     
     // MARK: - Initializers
     init(viewModel: MarketplaceHomeViewModel) {
@@ -42,7 +37,6 @@ class MarketplaceHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        products = getProducts()
         // Do any additional setup after loading the view.
     }
     
@@ -52,14 +46,11 @@ class MarketplaceHomeViewController: BaseViewController {
         tableView.dataSource = self
     }
     
-    private func getProducts() -> [Product]? {
-       return viewModel.getAllProducts()
-    }
 
 
     @IBAction func nextButtonDidPressed(_ sender: Any) {
         
-        let vm = CheckoutViewModel(selectedProducts: products!)
+        let vm = CheckoutViewModel(selectedCartProducts: viewModel.selectedElements)
         let vc = CheckoutViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)
         

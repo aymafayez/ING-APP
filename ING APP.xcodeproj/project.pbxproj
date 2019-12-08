@@ -152,6 +152,13 @@
 			path = CartElement;
 			sourceTree = "<group>";
 		};
+		944C5DF0239D9530002EF4F1 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 		944F56DB239A56000022A422 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +182,7 @@
 		944F56E6239A56000022A422 /* ING APP */ = {
 			isa = PBXGroup;
 			children = (
+				944C5DF0239D9530002EF4F1 /* NetworkLayer */,
 				944F576E239AFEF70022A422 /* Currencies */,
 				944F5723239A58410022A422 /* Base */,
 				944F5715239A56160022A422 /* Marketplace */,

@@ -17,22 +17,26 @@ class MarketplaceHomeViewController: BaseViewController {
     
     // MARK: - Properties
     let viewModel: MarketplaceHomeViewModel
+    let router: MarketPlaceRouter
     
     // MARK: - Initializers
-    init(viewModel: MarketplaceHomeViewModel) {
+    init(viewModel: MarketplaceHomeViewModel, router: MarketPlaceRouter) {
         self.viewModel = viewModel
+        self.router = router
         elementsList = viewModel.getElementsList()
         super.init(viewModel: viewModel)
     }
     
     required init?(coder aDecoder: NSCoder) {
         viewModel = MarketplaceHomeViewModel()
+        self.router = MarketPlaceRouter()
         elementsList = viewModel.getElementsList()
         super.init(coder: aDecoder)
     }
     
     public override init(nibName: String?, bundle: Bundle?) {
         viewModel = MarketplaceHomeViewModel()
+        self.router = MarketPlaceRouter()
         elementsList = viewModel.getElementsList()
         super.init(nibName: nibName, bundle: bundle)
     }
@@ -52,9 +56,7 @@ class MarketplaceHomeViewController: BaseViewController {
     
     @IBAction func nextButtonDidPressed(_ sender: Any) {
         let selectedElementsList = viewModel.getSelectedElementsList(from: elementsList)
-        let vm = CheckoutViewModel(selectedCartProducts: selectedElementsList)
-        let vc = CheckoutViewController(viewModel: vm)
-        navigationController?.pushViewController(vc, animated: true)
+        router.next(from: self, selectedElements: selectedElementsList)
     }
 
 }

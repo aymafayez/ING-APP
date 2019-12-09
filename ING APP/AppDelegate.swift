@@ -25,9 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navVC.navigationBar.isHidden = false
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
-        let vm = MarketplaceHomeViewModel()
-        let vc = MarketplaceHomeViewController(viewModel: vm)
-        navVC.pushViewController(vc, animated: true)
+        let router = MarketPlaceRouter()
+        router.start(navigationController: navVC)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

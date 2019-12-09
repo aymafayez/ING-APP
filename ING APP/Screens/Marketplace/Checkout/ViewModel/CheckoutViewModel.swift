@@ -23,7 +23,7 @@ class CheckoutViewModel: BaseViewModel {
     
     func calculateTotalPrice(cartElements: [CartElement],currency: Currency, onSuccess: @escaping (Double) -> () , onAPIError: @escaping (String) -> (), onConnectionError: @escaping (String) -> ()) {
         let dto = EmptyDTO()
-        let api = LatestExchangeRateAPI(requestDTO: dto, onSuccess: { exchangeRateDTO in
+        let api = LatestExchangeRateAPI(requestDTO: dto, accessKey:"f9482427865f5aec38729ba5be54f8ea", onSuccess: { exchangeRateDTO in
             var totalAmount = 0.0
             let exchangeRate = exchangeRateDTO?.rates[currency.rawValue]
                 for cartElement in cartElements {

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		944A6354239EE94B00DF865C /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A6353239EE94B00DF865C /* ActivityIndicatorView.swift */; };
 		944A6357239EF8B700DF865C /* Identifiers + FilesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A6356239EF8B700DF865C /* Identifiers + FilesNames.swift */; };
+		944A6359239EFD1A00DF865C /* MarketPlaceRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A6358239EFD1A00DF865C /* MarketPlaceRouterProtocol.swift */; };
+		944A635B239EFE2000DF865C /* MarketPlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A635A239EFE2000DF865C /* MarketPlaceRouter.swift */; };
+		944A635D239F053500DF865C /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A635C239F053500DF865C /* APIErrors.swift */; };
 		944C5DEF239D8948002EF4F1 /* CartElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C5DEE239D8948002EF4F1 /* CartElement.swift */; };
 		944C5DF4239D96A2002EF4F1 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C5DF3239D96A2002EF4F1 /* ParameterEncoder.swift */; };
 		944C5DF6239D96B8002EF4F1 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944C5DF5239D96B8002EF4F1 /* JSONParameterEncoder.swift */; };
@@ -90,6 +93,9 @@
 /* Begin PBXFileReference section */
 		944A6353239EE94B00DF865C /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		944A6356239EF8B700DF865C /* Identifiers + FilesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Identifiers + FilesNames.swift"; sourceTree = "<group>"; };
+		944A6358239EFD1A00DF865C /* MarketPlaceRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceRouterProtocol.swift; sourceTree = "<group>"; };
+		944A635A239EFE2000DF865C /* MarketPlaceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceRouter.swift; sourceTree = "<group>"; };
+		944A635C239F053500DF865C /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		944C5DEE239D8948002EF4F1 /* CartElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartElement.swift; sourceTree = "<group>"; };
 		944C5DF3239D96A2002EF4F1 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		944C5DF5239D96B8002EF4F1 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 				944C5E12239D9C7C002EF4F1 /* APIManagerConfiguration.swift */,
 				944C5E14239D9D6B002EF4F1 /* RequestExecuterCreator.swift */,
 				944C5E16239D9DB5002EF4F1 /* RequestExecuterCreatorFactory.swift */,
+				944A635C239F053500DF865C /* APIErrors.swift */,
 			);
 			path = BaseAPI;
 			sourceTree = "<group>";
@@ -369,6 +376,8 @@
 		944F5715239A56160022A422 /* Marketplace */ = {
 			isa = PBXGroup;
 			children = (
+				944A6358239EFD1A00DF865C /* MarketPlaceRouterProtocol.swift */,
+				944A635A239EFE2000DF865C /* MarketPlaceRouter.swift */,
 				944F5722239A581A0022A422 /* Home */,
 				944F5756239AA8CD0022A422 /* Checkout */,
 				944F576E239AFEF70022A422 /* ChooseCurrency */,
@@ -694,9 +703,12 @@
 				944C5E11239D9C3A002EF4F1 /* BaseAPIProtocol.swift in Sources */,
 				944C5DF6239D96B8002EF4F1 /* JSONParameterEncoder.swift in Sources */,
 				944F5783239B10A70022A422 /* CheckoutViewController + CurrenciesDelegate.swift in Sources */,
+				944A635D239F053500DF865C /* APIErrors.swift in Sources */,
 				944F5730239A6E180022A422 /* Egg.swift in Sources */,
 				944F572E239A6DDF0022A422 /* SeedsProduct.swift in Sources */,
+				944A635B239EFE2000DF865C /* MarketPlaceRouter.swift in Sources */,
 				944A6354239EE94B00DF865C /* ActivityIndicatorView.swift in Sources */,
+				944A6359239EFD1A00DF865C /* MarketPlaceRouterProtocol.swift in Sources */,
 				944F5778239B02570022A422 /* ChooseCurrencyViewModel.swift in Sources */,
 				944F5759239AAA060022A422 /* CheckoutViewController.swift in Sources */,
 				944F5717239A562D0022A422 /* BaseViewController.swift in Sources */,

@@ -17,13 +17,15 @@ class CheckoutViewController: BaseViewController {
     
     // MARK: - Properties
     var viewModel: CheckoutViewModel
+    var router: MarketPlaceRouter
     var selectedElements: [CartElement]
     var selectedCurrency: Currency
 
     
     // MARK: - Initializers
-    init(viewModel: CheckoutViewModel) {
+    init(viewModel: CheckoutViewModel, router: MarketPlaceRouter) {
         self.viewModel = viewModel
+        self.router = router
         selectedElements = viewModel.getSelectedElements()
         selectedCurrency = .EUR
         super.init(viewModel: viewModel)
@@ -31,6 +33,7 @@ class CheckoutViewController: BaseViewController {
     
     required init?(coder aDecoder: NSCoder) {
         viewModel = CheckoutViewModel(selectedCartProducts: [CartElement]())
+        self.router = MarketPlaceRouter()
         selectedElements = [CartElement]()
         selectedCurrency = .EUR
         super.init(coder: aDecoder)
@@ -65,8 +68,10 @@ class CheckoutViewController: BaseViewController {
             self?.totalPriceValueLabel.text = self?.formatTotalPrice(totalPrice: totalPrice)
             self?.hideLoadingView()
             }, onAPIError: { [weak self] error in
+                self?.hideLoadingView()
                 self?.showErrorView(title: "API Error", description: error)
         }, onConnectionError: { [weak self] error in
+                self?.hideLoadingView()
                 self?.showErrorView(title: "Connection Error", description: error)
         })
     }

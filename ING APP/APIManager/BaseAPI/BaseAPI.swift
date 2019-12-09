@@ -10,32 +10,87 @@ import Foundation
 
 public class BaseAPI<RequestModel: Encodable, ResponseModel: Decodable>: BaseAPIProtocol {
     
+    // MARK: - Properties
     var requestDTO: RequestModel?
     var onSuccess: ((ResponseModel?) -> Void)?
     var onAPIError: ((Error) -> Void)?
     var onConnectionError: ((Error) -> Void)?
     var requestExecuterCreator: RequestExecuterCreator
+    var httpMethod: HTTPMethod { return .get }
+    var relativeApiPath: String { return "" }
+    var paramEncoder: ParameterEncoder?
+    var session: URLSession { return URLSession.shared }
+    var httpHeaderFields: [String: String]?
+    var accessKey: String
     
-    
-    public init (requestDTO: RequestModel?, onSuccess: ((ResponseModel?) -> Void)?, onAPIError: ((Error) -> Void)?, onConnectionError: ((Error) -> Void)?, requestExecuterCreator: RequestExecuterCreator = RequestExecuterCreatorFactory()) {
+    // MARK: - Initializers
+    public init (requestDTO: RequestModel?, accessKey: String, onSuccess: ((ResponseModel?) -> Void)?, onAPIError: ((Error) -> Void)?, onConnectionError: ((Error) -> Void)?, requestExecuterCreator: RequestExecuterCreator = RequestExecuterCreatorFactory()) {
         self.requestDTO = requestDTO
         self.onSuccess = onSuccess
         self.onAPIError = onAPIError
         self.onConnectionError = onConnectionError
         self.requestExecuterCreator = requestExecuterCreator
         BaseAPI.configuration = APIManagerConfiguration(serverUrl: URL(string:"http://data.fixer.io/")!)
+        self.accessKey = accessKey
     }
     
-
-    // NOTE: To be overriden if needed
-    var httpMethod: HTTPMethod { return .get }
-    // NOTE: To be overriden if needed
-    var relativeApiPath: String { return "" }
-    // NOTE: To be overriden if needed
-    var paramEncoder: ParameterEncoder?
-    // NOTE: To be overriden if needed
-    var session: URLSession { return URLSession.shared }
-    var httpHeaderFields: [String: String]?
+    // MARK: - Methods
+    
+    public func execute() {
+        let apiURL = self.createAPIURL()
+        let body = self.createAPIParameters()
+        do {
+            let requestExecuter = try self.requestExecuterCreator.create(session: self.session, apiURL: apiURL, requestConfig: self.createRequestConfig(), parameters: body, paramEncoder: self.paramEncoder, onComplete: { [weak self](data, response) in
+                let decoder = JSONDecoder()
+                switch response.statusCode {
+                case 200..<300:
+                    guard let responseData = data else {
+                        return
+                    }
+                    do {
+                        let dto = try decoder.decode(ResponseModel.self, from: responseData)
+                        self?.processResponse(response: dto)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                case 500:
+                    self?.handleAPIError(error: APIError.interalServerError)
+                    
+                default:
+                    break
+                }
+                }, onFailure: { (error) in
+                    self.handleConnectionError(error:error)
+            })
+            requestExecuter.execute()
+        } catch {
+            print("Failed to encode request")
+        }
+    }
+    
+    func processResponse(response: ResponseModel?) {
+        if let successClosure = self.onSuccess {
+            DispatchQueue.main.async {
+                successClosure(response)
+            }
+        }
+    }
+    
+    final func handleAPIError(error: Error) {
+        if let errorClosure = self.onAPIError {
+            DispatchQueue.main.async {
+                errorClosure(error)
+            }
+        }
+    }
+    
+    func handleConnectionError(error: Error) {
+        if let errorClosure = self.onConnectionError {
+            DispatchQueue.main.async {
+                errorClosure(error)
+            }
+        }
+    }
     
     private final func createAPIURL() -> URL {
         return URL(string: self.relativeApiPath, relativeTo: BaseAPI.configuration.serverUrl)!
@@ -50,71 +105,6 @@ public class BaseAPI<RequestModel: Encodable, ResponseModel: Decodable>: BaseAPI
         return RequestConfig(httpMethod: self.httpMethod, allHTTPHeaderFields: self.httpHeaderFields)
     }
     
-    // NOTE: This method should not be overriden since it determines the execution pipline
-    public func execute() {
-        // check for access token and aesKey before starting the reques
-        // Prepare request url, data, encryption, request attributes...
-        let apiURL = self.createAPIURL()
-        let body = self.createAPIParameters()
-        
-        do {
-            let requestExecuter = try self.requestExecuterCreator.create(session: self.session, apiURL: apiURL, requestConfig: self.createRequestConfig(), parameters: body, paramEncoder: self.paramEncoder, onComplete: { (data, response) in
-                let decoder = JSONDecoder()
-                switch response.statusCode {
-                case 200..<300:
-                    guard let responseData = data else {
-                        return
-                    }
-                    do {
-                        let dto = try decoder.decode(ResponseModel.self, from: responseData)
-                        self.processResponse(response: dto)
-                    } catch {
-                        // TODO: Handle DTO parsing error
-                        print(error.localizedDescription)
-                    }
-                    
-                default:
-                   break
-                }
-            }, onFailure: { (error) in
-                self.handleConnectionError(error:error)
-            })
-            requestExecuter.execute()
-        } catch {
-            // TODOL What to do here
-            print("Failed to encode request")
-        }
-    }
-    
-    // NOTE: To be overriden if needed
-    func processResponse(response: ResponseModel?) {
-        // Unencrypt and/or Convert response json object to the corresponding DTO type and pass it to onSuccess() closure
-        if let successClosure = self.onSuccess {
-            DispatchQueue.main.async {
-                successClosure(response)
-            }
-        }
-    }
-    
-    // NOTE: This method should not be overriden since it will handle common errors
-    final func handleAPIError(error: Error) {
-        // TODO: Fire error actions (Logs, force logout on certain general errors...) and call onFailure() closure
-        if let errorClosure = self.onAPIError {
-            DispatchQueue.main.async {
-                errorClosure(error)
-            }
-        }
-    }
-    
-    // NOTE: To be overriden if needed
-    func handleConnectionError(error: Error) {
-        if let errorClosure = self.onConnectionError {
-            DispatchQueue.main.async {
-                errorClosure(error)
-            }
-        }
-    }
-
 }
 
 public extension Encodable {

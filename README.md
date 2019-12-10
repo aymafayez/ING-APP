@@ -11,8 +11,13 @@ ING-APP is consists of :-
  4- DTO                        :- Resposible for all APIs' request and response model 
 
  
- (The idea of the architecture is that every layer can be an external module that can be reused at the same product (Example: B2B applications))
- (Every layer should be an external module but I created the layers at the same project in order to make it easier to the reviewer)
+ Notes :- 
+ 
+ - The idea of the architecture is that every layer can be an external module that can be reused at the same product (Example:
+   B2B applications.
+   
+ - Every layer should be an external module but I created the layers at the same project in order to make it easier to the  
+  reviewer.
  
  
 1- AppLayer 
@@ -33,8 +38,8 @@ ING-APP is consists of :-
 
 - Generics are used to give the api the request and the response during the initialization.
 - BaseAPI is used to implement the shared functions and properties between all apis like base url and access key.
-- every api will inherit base layer should provide its url and http method.
+- Every api will inherit base layer should provide its url and http method.
 
 4- DTO
 
-- contains all requests and responses DTOs that confirms to the Encodable and Decodable protocol 
+- It contains all requests and responses DTOs that confirms to the Encodable and Decodable protocol. 

@@ -14,7 +14,7 @@ ING-APP is consists of :-
  Notes :- 
  
  - The idea of the architecture is that every layer can be an external module that can be reused at the same product (Example:
-   B2B applications.
+   B2B applications).
    
  - Every layer should be an external module but I created the layers at the same project in order to make it easier to the  
   reviewer.

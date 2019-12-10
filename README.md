@@ -3,8 +3,11 @@
 ING-APP is consists of :- 
 
  1- AppLayer                   :- Responsible for the features at the application
+ 
  2- NetworkLayer (Unit tested) :- Responsible for the HTTP Requests
+ 
  3- APIManager                 :- Responsible for All APIS at the app 
+ 
  4- DTO                        :- Resposible for all APIs' request and response model 
 
  

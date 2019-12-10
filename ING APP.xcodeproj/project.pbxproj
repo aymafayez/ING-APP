@@ -197,12 +197,12 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		944A6355239EF5DE00DF865C /* Screens */ = {
+		944A6355239EF5DE00DF865C /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
 				944F5715239A56160022A422 /* Marketplace */,
 			);
-			path = Screens;
+			path = AppLayer;
 			sourceTree = "<group>";
 		};
 		944C5DED239D8909002EF4F1 /* CartElement */ = {
@@ -341,7 +341,7 @@
 				944C5DF0239D9530002EF4F1 /* NetworkLayer */,
 				944C5E0D239D9B58002EF4F1 /* APIManager */,
 				944C5E1B239DA107002EF4F1 /* DTOs */,
-				944A6355239EF5DE00DF865C /* Screens */,
+				944A6355239EF5DE00DF865C /* AppLayer */,
 				944A6352239EE93700DF865C /* Utilities */,
 				944F5723239A58410022A422 /* Base */,
 				944F56E7239A56000022A422 /* AppDelegate.swift */,

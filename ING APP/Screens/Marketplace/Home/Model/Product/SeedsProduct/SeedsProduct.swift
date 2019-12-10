@@ -1,5 +1,5 @@
 //
-//  BaseViewModel.swift
+//  SeedsProduct.swift
 //  ING APP
 //
 //  Created by Guest2 on 12/6/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class BaseViewModel {
-    init() {}
+class SeedsProduct: Product {
+    
 }

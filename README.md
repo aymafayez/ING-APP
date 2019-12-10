@@ -22,7 +22,7 @@ ING-APP is consists of :-
  - Dependency injection is used at view controllers, view models, and models.
  - I did not have time to write unit tests for the applayer but I used dependency injection to make it testable.
  
-2- NetworkLayer
+2- NetworkLayer (Unit tested)
 
 - Unit tests are written with full code coverage.
 - It is desinged to be a simple network layer that serve the app.

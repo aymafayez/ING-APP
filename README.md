@@ -3,7 +3,8 @@
 Task :- 
 
 Write a mobile application that can price a basket of goods in a number of different currencies.
-The application shall allow to purchase the following goods, all priced in EUR:
+The application shall allow to purchase the following goods, all priced in EUR:-
+
 -Peas - 0.95 EUR per bag
 -Eggs - 2.1 EUR per dozen
 -Beans - 0.73 EUR per can

@@ -11,10 +11,10 @@ The application shall allow to purchase the following goods, all priced in EUR:-
 - Milk - 1.4 EUR per bottle
 
 App feature requirements:
--The app shall allow the user to add and remove items in a basket.
--The app shall allow the user to click on a checkout button that will display the total price of the users' basket.
--The app shall allow the user to display the amount in different currencies. E.g. A basket that contains a dozen eggs and the currency selected was USD, with an exchange rate of 1.08, the total would be 1.51 USD
--The list of currencies shall be consumed from http://fixer.io. Mind that the exchanges rate may change at any time. 
+- The app shall allow the user to add and remove items in a basket.
+- The app shall allow the user to click on a checkout button that will display the total price of the users' basket.
+- The app shall allow the user to display the amount in different currencies. E.g. A basket that contains a dozen eggs and the currency selected was USD, with an exchange rate of 1.08, the total would be 1.51 USD
+- The list of currencies shall be consumed from http://fixer.io. Mind that the exchanges rate may change at any time. 
 
 Feel free to design the UI in any way you see most appropriate to the solution.
 You can use third party libraries that you might require as long as their use is clearly stated. 
